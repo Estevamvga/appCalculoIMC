@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class    MainActivity extends AppCompatActivity {
 
@@ -31,13 +32,11 @@ public class    MainActivity extends AppCompatActivity {
     }
 
     protected void configurarBotaoVerificar() {
-        btCalcular.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                String resultado = realizaCalculo();
-                exibiResultado(resultado);
-                limpaCampos();
-            }
+        btCalcular.setOnClickListener(view -> {
+            Toast.makeText(this, "Calculando", Toast.LENGTH_SHORT).show();
+            String resultado = realizaCalculo();
+            exibiResultado(resultado);
+            limpaCampos();
         });
     }
 
