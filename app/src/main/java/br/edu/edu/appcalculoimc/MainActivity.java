@@ -47,23 +47,31 @@ public class    MainActivity extends AppCompatActivity {
 
         String resultado_imc = "";
         if (res <16) {
+            Toast.makeText(this, "Magreza grave", Toast.LENGTH_SHORT).show();
             resultado_imc = "Magreza grave.";
         }else if ( (res >=16) && (res <17)){
+            Toast.makeText(this, "Magreza moderada", Toast.LENGTH_SHORT).show();
             resultado_imc = "Magreza moderada.";
         }else if ( (res >=17) && (res <18.5)) {
+            Toast.makeText(this, "Magreza leve", Toast.LENGTH_SHORT).show();
             resultado_imc = "Magreza leve.";
         }else if ( (res >=18.5) && (res <25)) {
+            Toast.makeText(this, "Saldavel", Toast.LENGTH_SHORT).show();
             resultado_imc = "Saudável.";
         }else if ( (res >=25) && (res <30)) {
+            Toast.makeText(this, "Sobrepeso", Toast.LENGTH_SHORT).show();
             resultado_imc = "Sobrepeso.";
         }else if ( (res >=30) && (res <35)) {
+            Toast.makeText(this, "Obesidade Grau I", Toast.LENGTH_SHORT).show();
             resultado_imc = "Obesidade Grau I.";
         }else if ( (res >=35) && (res <40)) {
+            Toast.makeText(this, "Obesidade Grau II", Toast.LENGTH_SHORT).show();
             resultado_imc = "Obesidade Grau II.";
         }else if ( res>40){
+            Toast.makeText(this, "Obesidade Grau III", Toast.LENGTH_SHORT).show();
             resultado_imc = "Obsesidade Grau III.";
         }
-        else resultado_imc= "Tente novamente!";
+        else Toast.makeText(this, "Dados invalido", Toast.LENGTH_SHORT).show();
         return resultado_imc;
 
     }
